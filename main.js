@@ -1,4 +1,4 @@
-// please note that i am using es6 syntexs but i can also with traditional javascript
+// please note that i am using es6 syntexs but i can also with traditional javascripts
 
 // mocking data
 const carTitle = "Maruti Suzuki Swift"
@@ -14,6 +14,7 @@ const meterDivEl = document.querySelector("#meter_div");
 const ratingEl = document.querySelector("#rating");
 const overallEl = document.querySelector(".Overall");
 const selectedColorEl = document.querySelector("#selected_color");
+const loaderEl = document.querySelector("#loader");
 
 // setting title from data
 titleEl.innerHTML = `${carTitle}'s <strong>raiting</strong>`
@@ -25,9 +26,19 @@ carColors.map(d=>{
 
 // shows selected car images
 const carClr = (clr) =>{
-	carImgEl.innerHTML = `<img id='car_display' src='./assets/${clr}.jpg'>`;
+	carImgEl.innerHTML = `<img onload="loadImage()" id='car_display' src='./assets/${clr}.jpg'>`;
 	selectedColorEl.innerHTML = `selected color <strong>${clr}</strong>`;
+
+	let img = document.querySelector("#car_display");
+
+
 }
+
+const loadImage = ()=>{
+	loaderEl.style.display = 'none'
+}
+
+
 
 // titrate every avilable ratings from carRatings array and creates progress-bar
 for(raing in carRatings){
