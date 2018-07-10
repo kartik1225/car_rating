@@ -27,16 +27,22 @@ carColors.map(d=>{
 // shows selected car images
 const carClr = (clr) =>{
 	loaderEl.style.display = 'block'
+
 	carImgEl.innerHTML = `<img onload="loadImage()" id='car_display' src='./assets/${clr}.jpg'>`;
 	selectedColorEl.innerHTML = `selected color <strong>${clr}</strong>`;
 
 	let img = document.querySelector("#car_display");
+	img.style.display = 'none'
 
 
 }
 
 const loadImage = ()=>{
-	loaderEl.style.display = 'none'
+	setTimeout(()=>{
+		loaderEl.style.display = 'none'
+		let img = document.querySelector("#car_display");
+		img.style.display = 'block'
+	},500)
 }
 
 
