@@ -37,6 +37,7 @@ const carClr = (clr) =>{
 
 }
 
+
 const loadImage = ()=>{
 	setTimeout(()=>{
 		loaderEl.style.display = 'none'
