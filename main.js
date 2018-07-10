@@ -26,6 +26,7 @@ carColors.map(d=>{
 
 // shows selected car images
 const carClr = (clr) =>{
+	loaderEl.style.display = 'block'
 	carImgEl.innerHTML = `<img onload="loadImage()" id='car_display' src='./assets/${clr}.jpg'>`;
 	selectedColorEl.innerHTML = `selected color <strong>${clr}</strong>`;
 
