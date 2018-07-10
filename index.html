@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>select your car</title>
+</head>
+<body>
+	<!-- toolbar -->
+	<div class="toolbar card-2">
+		<span style="color: #fff;"><strong>Maruti</strong></span>
+	</div>
+
+	<!-- main -->
+	<div id='wrap'>
+		<!-- car display -->
+		<div id='display_wraper'>
+			<div id='car_img' style="display: flex; justify-content: center;">
+				<!-- car image from carClr() function-->
+			</div>
+
+			<p class="text-xs-center">Avilable colors</p>
+
+			<div id='color_ops' style="display: flex; justify-content: center;">
+				<!-- Avilable colors from carColors Array -->
+			</div>
+			<p id='selected_color' class="text-xs-center" style="font-size: 16px; color: #9e9e9e;"></p>
+		</div>
+
+		<!-- all raings bars -->
+		<div id='info_wrapr'>
+			<div id='box-2'>
+				<div id="rating">
+					<!-- car name or title -->
+					<p id='title' class="title"></p>
+				</div>
+				<p style='text-align: right; '>View All Raitings >></p>
+			</div>
+
+			<div id='box-3'>
+				<!-- overall rating meter -->
+				<div id='meter_div'>
+						<img id='meter' src='./assets/icon-meter.png'/>
+						<div class="Overall" style="font-size: 24px;"></div>
+						<p class="text-xs-center" style="margin:auto; font-size: 18px; color: #9e9e9e;">Overall Raiting</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+<link rel="stylesheet" href="main.css">
+<script src='./main.js'></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</html>	
